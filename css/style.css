@@ -1,80 +1,36 @@
-.row {
-  max-width: 124 rem;
-  margin: 0 auto; }
-  .row:not(:last-child) {
-    margin-bottom: 8rem; }
-  .row [class^="col-"] {
-    float: left; }
-    .row [class^="col-"]:not(:last-child) {
-      margin-right: 6rem; }
-  .row .col-1-of-2 {
-    width: calc((100% - 6rem) / 2); }
-  .row .col-1-of-3 {
-    width: calc((100% - 2 * 6rem) / 3); }
-  .row .col-2-of-3 {
-    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
-  .row .col-1-of-4 {
-    width: calc((100% - 3 * 6rem) / 4); }
-    .row .col-1-of-4 .col-3-of-4 {
-      width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem ); }
+/*
+Error: Invalid CSS after "}": expected "}", was ""
+        on line 256 of scss/style.scss
 
-/*CHARTUI*/
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-html {
-  font-size: 94%; }
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  box-sizing: border-box; }
-
-.header {
-  background-color: #FFDB56;
-  padding: 0;
-  margin: 0;
-  height: 10vh; }
-
-/*SLIDER*/
-#container {
-  background-color: #9F9798;
-  min-height: 400px;
-  width: 100%;
-  padding-bottom: 2em; }
-
-.slider {
-  background-color: #9F9798; }
-
-.containerone__right {
-  width: 30%;
-  height: auto;
-  position: absolute;
-  left: 60%;
-  top: 10%; }
-
-.tagline {
-  padding-top: 2em;
-  padding-left: 2em; }
-
-/*BUTTONS SLIDER*/
-.btn_container {
-  margin-top: 10rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start; }
-  .btn_container_btnleft {
-    text-align: center;
-    display: block;
-    margin-right: 1em;
-    width: 5rem;
-    height: 2rem;
-    border-radius: 0.23em; }
-    .btn_container_btnleft:hover {
-      font-weight: 500; }
-
-/*# sourceMappingURL=style.css.map */
+Backtrace:
+scss/style.scss:256
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/scss/parser.rb:1179:in `expected'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/scss/parser.rb:1115:in `expected'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/scss/parser.rb:1110:in `tok!'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/scss/parser.rb:657:in `block'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/scss/parser.rb:649:in `ruleset'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/scss/parser.rb:674:in `block_child'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/scss/parser.rb:667:in `block_contents'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/scss/parser.rb:126:in `stylesheet'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/scss/parser.rb:42:in `parse'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/engine.rb:403:in `_to_tree'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/plugin/compiler.rb:293:in `watch'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/plugin.rb:108:in `method_missing'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/exec/sass_scss.rb:381:in `watch_or_update'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/exec/base.rb:52:in `parse'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/exec/base.rb:19:in `parse!'
+/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:22:in `load'
+/usr/local/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 256 of scss/style.scss"; }

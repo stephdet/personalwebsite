@@ -25,48 +25,106 @@
 
   <!--HEADER {logo > NAV}-->
 
-  <div class="header">
-    <h1 class="header__logo">
-      <a class="header__logo__logobox" href="#"><span>Stéphane Dethy</span></a>
-    </h1>
 
-    <nav class="header__nav">
-      <li><a href="" class="header__nav_item" title="Features">About</a></li>
-      <li><a href="" class="header__nav_item" title="Features">Work</a></li>
-      <li><a href="" class="header__nav_item" title="Features">Blog</a></li>
+  <div class="navigation">
+    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+    <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;
+        </span>
+    </label>
+    <div class="navigation__background">&nbsp;
+    </div>
+
+    <!--MAINNAV-->
+    <nav class="navigation__nav">
+        <ul class="navigation__list">
+            <li class="navigation__item">
+                <a href="#" class="navigation__link">
+                    Compétences</a>
+            </li>
+            <li class="navigation__item">
+                <a href="#" class="navigation__link">
+                    Réalisations</a>
+            </li>
+            <li class="navigation__item">
+                <a href="#" class="navigation__link">
+                    Parcours</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                  Contact</a>
+          </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">
+                  Blog</a>
+          </li>
+        </ul>
     </nav>
+</div>
 
 
-    <!--END HEADER {logo > NAV}-->
+  <div class="header">
+      <a class="header_logo" href="#"><img src="img/logodigital.png" alt="logo SD"></a>
+      <div class="header_maintitle">
+          <h1 class="header_maintitle__name">Stéphane Dethy</h1>
+          <h2 class="header_maintitle__activity">Designer Front-End</h2>
+        </div>
+
   </div>
 
-    <div class="slider">
+
+  <!--photo contraste-->
+  <div class=row>
+      <section="presentationlight">
+          <h3 classs="presentationlight__secondinfo"></h3>
+              <p class="">Portfolio des projets Ux et Interfaces</p>
+              <a class="btn_1">voir</a>
+      </section>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
           <div id="container">
               <div id="theTarget">
-                  <div style="background-image: url(img/designux.png),background-position:"cover"></div>
-                  <div style="background-image: url(img/designux.png)"></div>
-                  <div style="background-image: url(img/designux.png)"></div>
-                  <div style="background-image: url(img/designux.png)"></div>
-                  <div style="background-image: url(img/designux.png)"></div>
+                  <div style="background-image: url(img/photo1.jpg)"></div>
+                  <div style="background-image: url(img/photo2.jpg)"></div>
+                  <div style="background-image: url(img/photo3.jpg)"></div>
+                  <div style="background-image: url(img/photo4.jpg)"></div>
               </div>
-          </div>
-      </div>
+          </div> -->
 
   <!--STARTMAIN  { SECTIONS > masonry}-->
 
   <section class="knowledges">
-    <h1 class="secondtitle">knowledges</h1>
+    <h1 class="secondtitle">Compétences</h1>
   </section>
 
 
 <!--Masonry-->
+
   <div class="portfolio">
   </div>
 
 
+
   <div class="About">
   <section class="about">
-    <h1 class="secondtitle">about</h1>
+    <h1 class="secondtitle">bio</h1>
   </section>
   </div>
 
@@ -112,22 +170,11 @@
   //
   // });
 
+   $(document).ready(function(){
 
-  $("#theTarget").skippr({
+$("#theTarget").skippr();
 
-         transition: 'slide',
-         speed: 1000,
-         easing: 'easeOutQuart',
-         navType: 'block',
-         childrenElementType: 'div',
-         arrows: true,
-         autoPlay: false,
-         autoPlayDuration: 5000,
-         keyboardOnAlways: true,
-         hidePrevious: false
-
-     });
-
+});    
 
 
 
