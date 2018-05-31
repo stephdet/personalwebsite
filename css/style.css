@@ -1,36 +1,238 @@
-/*
-Error: Invalid CSS after "}": expected "}", was ""
-        on line 256 of scss/style.scss
+.row {
+  max-width: 124 rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+    .row .col-1-of-4 .col-3-of-4 {
+      width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem ); }
 
-Backtrace:
-scss/style.scss:256
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/scss/parser.rb:1179:in `expected'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/scss/parser.rb:1115:in `expected'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/scss/parser.rb:1110:in `tok!'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/scss/parser.rb:657:in `block'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/scss/parser.rb:649:in `ruleset'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/scss/parser.rb:674:in `block_child'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/scss/parser.rb:667:in `block_contents'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/scss/parser.rb:126:in `stylesheet'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/scss/parser.rb:42:in `parse'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/engine.rb:403:in `_to_tree'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/engine.rb:295:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/plugin/compiler.rb:293:in `watch'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/plugin.rb:108:in `method_missing'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/exec/sass_scss.rb:381:in `watch_or_update'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.3.0/gems/sass-4.0.0.alpha.1/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:22:in `load'
-/usr/local/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 256 of scss/style.scss"; }
+/*CHARTEUI*/
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem); }
+  50% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 94%; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
+  box-sizing: border-box; }
+
+/*LAYOUTGENERAL*/
+main {
+  margin: 0 auto;
+  width: 100%; }
+
+.header {
+  background-color: #FFDB56;
+  padding: 0;
+  margin: 0;
+  height: 12rem;
+  position: relative; }
+  .header_logo {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    display: block;
+    width: 100px;
+    height: 100px;
+    float: left; }
+  .header_maintitle {
+    float: left;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    line-height: 1.3em; }
+    .header_maintitle__name::first-letter {
+      text-transform: uppercase; }
+
+/*SECTION*/
+.presentationlight {
+  background-image: linear-gradient(to right top, rgba(0, 20, 20, 0.8), rgba(70, 70, 70, 0.8)), url(../img/imgdesk.jpg);
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  margin: 0 auto; }
+
+.centred {
+  padding-top: 20vh;
+  padding-left: 10vw;
+  padding-right: 10vw; }
+
+.featured {
+  text-align: center;
+  min-height: 80vh; }
+
+/*FEATUREDICONES*/
+.illu {
+  background-image: url(../img/ux.svg);
+  background-position: center;
+  background-size: cover;
+  width: 142px;
+  height: 164px; }
+
+img {
+  max-width: 100%; }
+
+/*TITRES*/
+.presentationlight {
+  font-size: 1.8em;
+  color: #FFFFFF;
+  word-spacing: 0.2em; }
+
+/*PARAGRAPHES*/
+.mainpara {
+  font-size: 1em;
+  line-height: 1.5em; }
+
+/*ANIMATION MAINTITLE*/
+.header_maintitle__name {
+  animation-name: apparition;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out; }
+
+.header_maintitle__activity {
+  animation-name: apparition;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out; }
+
+/*NAVIGATION*/
+.navigation {
+  /*FUNCTIONALITY*/ }
+  .navigation__checkbox {
+    display: none; }
+  .navigation__button {
+    background-color: #FFFFFF;
+    height: 4rem;
+    width: 4rem;
+    position: fixed;
+    top: 4rem;
+    right: 4rem;
+    border-radius: 50%;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer; }
+  .navigation__background {
+    box-shadow: 1px 1px 10px #9F9798;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 4rem;
+    right: 4rem;
+    z-index: 1000;
+    background-color: #FFDB56; }
+  .navigation__nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  .navigation__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 100%; }
+  .navigation__item {
+    margin: 1rem; }
+  .navigation__link {
+    /*ENDNAV*/ }
+    .navigation__link:link, .navigation__link:visited {
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 300;
+      padding: 1rem 2rem;
+      color: #FFFFFF;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #FFFFFF 50%);
+      background-size: 220%;
+      transition: all .4s; }
+    .navigation__link:hover, .navigation__link:active {
+      background-position: 100%;
+      color: #9F9798;
+      transform: translateX(rem); }
+  .navigation__checkbox:checked ~ .navigation__background {
+    transform: scale(80); }
+  .navigation__checkbox:checked ~ .navigation__nav {
+    opacity: 1;
+    width: 100%; }
+  .navigation__icon {
+    position: relative;
+    margin-top: 2.2rem; }
+    .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+      width: 2rem;
+      height: 2px;
+      background-color: #9F9798;
+      display: inline-block; }
+    .navigation__icon::before, .navigation__icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s; }
+    .navigation__icon::before {
+      top: -.4rem; }
+    .navigation__icon::after {
+      top: .4rem; }
+  .navigation__button:hover .navigation__icon::before {
+    top: -1rem; }
+  .navigation__button:hover .navigation__icon::after {
+    top: 1rem; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon {
+    background-color: transparent; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+    top: 0;
+    transform: rotate(135deg); }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+    top: 0;
+    transform: rotate(-135deg); }
+
+/*BOUTONS*/
+.btn_1 {
+  margin-top: 4rem;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid #fff;
+  font-size: 1em;
+  font-weight: 400;
+  width: 10rem;
+  text-decoration: none;
+  text-align: center; }
+  .btn_1:hover {
+    box-shadow: 1px 1px 5px #fff;
+    font-weight: 600; }
+
+/*# sourceMappingURL=style.css.map */
