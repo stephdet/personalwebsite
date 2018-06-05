@@ -25,7 +25,7 @@ html {
 }
 
 
-body{
+body {
   font-family:$font-sans;
   font-weight: 400;
   margin: 0 auto;
@@ -78,12 +78,8 @@ main {
 
 
 
-
-
-
-
 .presentationlight {
-  background-image: linear-gradient( to right top, rgba(0,20,20, 0.8), rgba(70,70,70, 0.8)), url(../img/imgdesk.jpg);  min-height: 80vh;
+  background-image:url(../img/imgdesk.jpg);  min-height: 80vh;
   background-size:cover;
   background-position: center;
   text-align: center;
@@ -93,9 +89,7 @@ main {
 
 
 .centred {
-  padding-top:20vh;
-  padding-left: 10vw;
-  padding-right: 10vw;
+  padding-top:24vh;
 
 }
 
@@ -104,6 +98,21 @@ main {
   text-align: center;
   min-height: 80vh;
 }
+
+
+
+.subcomp {
+display: inline-block;
+
+}
+
+h4{
+  padding-top:10vh;
+  text-transform: uppercase;
+  color:$color-gris-warm;
+}
+
+
 
 
 /*FEATUREDICONES*/
@@ -118,10 +127,33 @@ main {
 .illu {
   background-image: url(../img/ux.svg);
   background-position:center;
+  background-size:cover;
+  width:154px;
+  height:170px;
+}
+
+
+.illu-1 {
+  background-image: url(../img/design.svg);
+  background-position:center;
   background-size: cover;
-  width:142px;
+  width:154px;
   height:164px;
 }
+
+.illu-2 {
+  background-image: url(../img/coding.svg);
+  background-position:center;
+  background-size: cover;
+  width:154px;
+  height:164px;
+}
+
+
+
+
+
+
 
 
 img {
@@ -140,24 +172,21 @@ img {
 }
 
 
+.secondtitle {
+  margin-top: 12vh;
+  margin-bottom: 12vh;
+  font-size: 2.2em;
+}
+
+
+
+
 /*PARAGRAPHES*/
 
 .mainpara{
  font-size: 1em;
  line-height: 1.5em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -211,8 +240,6 @@ img {
   right: 4rem;
   z-index: 1000;
   background-color:$color-jaune-light;
- 
-  //transform: scale(80);
 }
 
 
@@ -236,6 +263,8 @@ img {
   list-style: none;
   text-align: center;
   width: 100%;
+  animation-name :disparition;
+
 }
 
 &__item {
@@ -260,9 +289,10 @@ img {
   
   &:hover,
   &:active {
-      background-position: 100%;
+      background-position:100%;
       color:#9F9798;
-      transform: translateX(rem);
+      transform: translateX(1rem);
+
   }
 
 
@@ -281,6 +311,9 @@ img {
   }
 
 
+
+
+/*les trois barres*/
 
 &__icon {
   position: relative;
@@ -303,8 +336,8 @@ img {
       transition: all .2s;
   }
 
-  &::before { top: -.4rem; }
-  &::after { top: .4rem; }
+  &::before { top: -.6rem; }
+  &::after { top: .6rem; }
 }
 
 
