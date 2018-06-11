@@ -1,6 +1,12 @@
 .row {
-  max-width: 124 rem;
+  max-width: 124rem;
   margin: 0 auto; }
+  @media screen and (max-width: 40rem) {
+    .row {
+      width: auto; } }
+  @media screen and (min-width: 120rem) {
+    .row {
+      width: auto; } }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
   .row [class^="col-"] {

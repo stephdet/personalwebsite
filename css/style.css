@@ -1,6 +1,12 @@
 .row {
-  max-width: 124 rem;
+  max-width: 124rem;
   margin: 0 auto; }
+  @media screen and (max-width: 40rem) {
+    .row {
+      width: auto; } }
+  @media screen and (min-width: 120rem) {
+    .row {
+      width: auto; } }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
   .row [class^="col-"] {
@@ -37,6 +43,17 @@
   0% {
     opacity: 0;
     transform: translateY(-20rem); } }
+.grid {
+  max-width: 100rem;
+  background-color: red;
+  height: auto; }
+
+.grid-item {
+  width: 465px; }
+
+.grid-item--width2 {
+  width: 930px; }
+
 *,
 *::after,
 *::before {
@@ -50,14 +67,9 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  margin: 0 auto;
   box-sizing: border-box; }
 
 /*LAYOUTGENERAL*/
-main {
-  margin: 0 auto;
-  width: 100%; }
-
 .header {
   background-color: #FFDB56;
   padding: 0;
@@ -85,7 +97,13 @@ main {
   min-height: 80vh;
   background-size: cover;
   background-position: center;
-  text-align: center;
+  margin: 0 auto; }
+
+.presentationportolio {
+  background-image: url(../img/image2.jpg);
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
   margin: 0 auto; }
 
 .centred {
@@ -93,23 +111,28 @@ main {
 
 .featured {
   text-align: center;
-  min-height: 80vh; }
+  min-height: 60vh; }
 
 .subcomp {
   display: inline-block; }
 
-h4 {
-  padding-top: 10vh;
-  text-transform: uppercase;
-  color: #9F9798; }
+.about {
+  background-color: #8CE8BD;
+  min-height: 60vh;
+  clear: both;
+  text-align: center;
+  padding-top: 20vh; }
+
+.round {
+  border-radius: 50%; }
 
 /*FEATUREDICONES*/
 .illu {
   background-image: url(../img/ux.svg);
   background-position: center;
-  background-size: cover;
+  background-size: 97% 97%;
   width: 154px;
-  height: 170px; }
+  height: 164px; }
 
 .illu-1 {
   background-image: url(../img/design.svg);
@@ -132,12 +155,20 @@ img {
 .presentationlight {
   font-size: 1.8em;
   color: #FFFFFF;
-  word-spacing: 0.2em; }
+  word-spacing: 0.2em;
+  text-align: center; }
 
 .secondtitle {
   margin-top: 12vh;
   margin-bottom: 12vh;
-  font-size: 2.2em; }
+  font-size: 2.2em;
+  text-align: center; }
+
+h4 {
+  padding-top: 10vh;
+  text-transform: uppercase;
+  color: #9F9798;
+  vertical-align: baseline; }
 
 /*PARAGRAPHES*/
 .mainpara {

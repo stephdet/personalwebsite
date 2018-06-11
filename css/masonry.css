@@ -1,0 +1,12 @@
+.grid {
+  max-width: 100rem;
+  background-color: red;
+  height: auto; }
+
+.grid-item {
+  width: 465px; }
+
+.grid-item--width2 {
+  width: 930px; }
+
+/*# sourceMappingURL=masonry.css.map */

@@ -1,6 +1,7 @@
 @import "grid";
 @import "variables";
 @import "animation";
+@import "masonry";
 
 
 
@@ -28,18 +29,18 @@ html {
 body {
   font-family:$font-sans;
   font-weight: 400;
-  margin: 0 auto;
   box-sizing: border-box;
-
 }
+
+
 
 
 /*LAYOUTGENERAL*/
 
-main {
-  margin: 0 auto;
-  width:100%;
-}
+// main {
+//   margin: 0 auto;
+//   width:100%;
+// }
 
 
 .header {
@@ -50,26 +51,26 @@ main {
   position:relative;
 
 
-&_logo{
-  padding-top: 2rem;
-  padding-left: 2rem;
-  display:block;
-  width:100px;
-  height:100px;
-  float:left;
-}
-
-&_maintitle {
-  float:left;
-  padding-left: 2rem; 
-  padding-top: 2rem;
-  line-height: 1.3em;
-  
-  &__name::first-letter {
-    text-transform: uppercase;
-
+  &_logo{
+    padding-top: 2rem;
+    padding-left: 2rem;
+    display:block;
+    width:100px;
+    height:100px;
+    float:left;
   }
-}
+
+  &_maintitle {
+    float:left;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    line-height: 1.3em;
+
+    &__name::first-letter {
+      text-transform: uppercase;
+
+    }
+  }
 
 
 }
@@ -82,35 +83,60 @@ main {
   background-image:url(../img/imgdesk.jpg);  min-height: 80vh;
   background-size:cover;
   background-position: center;
-  text-align: center;
+  // text-align: center;
   margin: 0 auto;
-
 }
+
+.presentationportolio{
+  background-image:url(../img/image2.jpg);  min-height: 80vh;
+  background-size:cover;
+  background-position: center;
+  // text-align: center;
+  margin: 0 auto;
+}
+
+
+
+
 
 
 .centred {
   padding-top:24vh;
-
 }
 
 
-.featured{  
+.featured{
   text-align: center;
-  min-height: 80vh;
+  min-height: 60vh;
+
 }
 
 
 
 .subcomp {
-display: inline-block;
-
+  display: inline-block;
 }
 
-h4{
-  padding-top:10vh;
-  text-transform: uppercase;
-  color:$color-gris-warm;
+
+
+.about {
+  background-color:#8CE8BD;
+  min-height: 60vh;
+  clear: both;
+  text-align: center;
+  padding-top: 20vh;
 }
+
+
+.round {
+  border-radius: 50%;
+}
+
+
+
+
+
+
 
 
 
@@ -127,9 +153,9 @@ h4{
 .illu {
   background-image: url(../img/ux.svg);
   background-position:center;
-  background-size:cover;
+  background-size:97% 97%;
   width:154px;
-  height:170px;
+  height:164px;
 }
 
 
@@ -150,12 +176,6 @@ h4{
 }
 
 
-
-
-
-
-
-
 img {
   max-width:100%;
 }
@@ -168,6 +188,7 @@ img {
   font-size: 1.8em;
   color:$color-white;
   word-spacing: 0.2em;
+  text-align: center;
 
 }
 
@@ -176,6 +197,16 @@ img {
   margin-top: 12vh;
   margin-bottom: 12vh;
   font-size: 2.2em;
+  text-align: center;
+
+}
+
+h4{
+  padding-top:10vh;
+  text-transform: uppercase;
+  color:$color-gris-warm;
+  vertical-align: baseline;
+
 }
 
 
@@ -184,8 +215,8 @@ img {
 /*PARAGRAPHES*/
 
 .mainpara{
- font-size: 1em;
- line-height: 1.5em;
+  font-size: 1em;
+  line-height: 1.5em;
 }
 
 
@@ -228,52 +259,52 @@ img {
     box-shadow: 0 1rem 3rem rgba($color-black, .1);
     text-align: center;
     cursor: pointer;
-}
+  }
 
-&__background {
-  box-shadow:1px 1px 10px #9F9798;
-  height: 4rem;
-  width: 4rem;
-  border-radius: 50%;
-  position: fixed;
-  top: 4rem;
-  right: 4rem;
-  z-index: 1000;
-  background-color:$color-jaune-light;
-}
-
-
-&__nav {
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1500;
-  opacity: 0;
-  width: 0;
-  transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
+  &__background {
+    box-shadow:1px 1px 10px #9F9798;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 4rem;
+    right: 4rem;
+    z-index: 1000;
+    background-color:$color-jaune-light;
+  }
 
 
-&__list {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  list-style: none;
-  text-align: center;
-  width: 100%;
-  animation-name :disparition;
+  &__nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    opacity: 0;
+    width: 0;
+    transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
 
-}
 
-&__item {
-  margin: 1rem;
-}
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    animation-name :disparition;
 
-&__link {
-  &:link,
-  &:visited {
+  }
+
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
       display: inline-block;
       font-size: 3rem;
       font-weight: 300;
@@ -285,83 +316,83 @@ img {
       background-size: 220%;
       transition: all .4s;
 
-  }
-  
-  &:hover,
-  &:active {
+    }
+
+    &:hover,
+    &:active {
       background-position:100%;
       color:#9F9798;
       transform: translateX(1rem);
 
+    }
+
+
+    /*ENDNAV*/
   }
 
+  /*FUNCTIONALITY*/
 
-/*ENDNAV*/
-}
-
-    /*FUNCTIONALITY*/
-    
-    &__checkbox:checked ~ &__background {
-      transform: scale(80);
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
   }
 
   &__checkbox:checked ~ &__nav {
-      opacity: 1;
-      width: 100%;
+    opacity: 1;
+    width: 100%;
   }
 
 
 
 
-/*les trois barres*/
+  /*les trois barres*/
 
-&__icon {
-  position: relative;
-  margin-top: 2.2rem;
+  &__icon {
+    position: relative;
+    margin-top: 2.2rem;
 
-  &,
-  &::before,
-  &::after {
+    &,
+    &::before,
+    &::after {
       width: 2rem;
       height: 2px;
       background-color:#9F9798;
       display: inline-block;
-  }
+    }
 
-  &::before,
-  &::after {
+    &::before,
+    &::after {
       content: "";
       position: absolute;
       left: 0;
       transition: all .2s;
+    }
+
+    &::before { top: -.6rem; }
+    &::after { top: .6rem; }
   }
 
-  &::before { top: -.6rem; }
-  &::after { top: .6rem; }
-}
 
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
 
-&__button:hover &__icon::before {
-  top: -1rem;
-}
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
 
-&__button:hover &__icon::after {
-  top: 1rem;
-}
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
 
-&__checkbox:checked + &__button &__icon {
-  background-color: transparent;
-}
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
 
-&__checkbox:checked + &__button &__icon::before {
-  top: 0;
-  transform: rotate(135deg);
-}
-
-&__checkbox:checked + &__button &__icon::after {
-  top: 0;
-  transform: rotate(-135deg);
-}
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
 
 }
 
@@ -381,9 +412,9 @@ img {
   width:10rem;
   text-decoration: none;
   text-align: center;
-&:hover {
-  box-shadow: 1px 1px 5px #fff;
-  font-weight:600;
-}
+  &:hover {
+    box-shadow: 1px 1px 5px #fff;
+    font-weight:600;
+  }
 
 }
